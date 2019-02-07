@@ -1,6 +1,7 @@
 # Calculator Web Application.
 ```
-It is a sample web application to calculate addition, substraction, divison and multiplication hosted on the ubuntu instance created using Amazon web serivces. 
+It is a sample web application to calculate addition, substraction, divison 
+and multiplication hosted on the ubuntu instance created using Amazon web serivces. 
 ```
 
 
@@ -9,7 +10,8 @@ It is a sample web application to calculate addition, substraction, divison and 
 ```
 link: ec2-18-216-131-164.us-east-2.compute.amazonaws.com/application/
 
-Go the the above link and give two input numbers and press a submit for calculations. ouput is displayed below the submit buttons. 
+Go the the above link and give two input numbers and press a submit for calculations.
+ouput is displayed below the submit buttons. 
 
 ```
 ### Prerequisites
@@ -48,7 +50,7 @@ Go the the above link and give two input numbers and press a submit for calculat
  ```
  ### Deployment of App to the server. 
  
-
+```
  1. Create a instance "Ubuntu 18.04" in the amazon web service. (you can choose alternate cloud vendor). AWS is offering 1 year free trail. 
  2. Once the instance is launched, download the key (.pem file) and convert to ppk file. this file can be used as to connect to instance using SSH auth. (Default username: ubuntu)
  
@@ -98,21 +100,22 @@ Go the the above link and give two input numbers and press a submit for calculat
    
    
    Now we integrated our python web application with Apache web server. Now run the public DNS, Our application will be shown. 
-   
+  ``` 
   
 ## Built With
-
+```
 * Django: The web framework used
 * Amazon web services(AWS) : for launching instance
 * Python: Programing language to develop web application
 * HTML, CSS - templates
-
+```
 ## Authors
-
+```
    SAI KISHORE AKULA (M12951663) - University Of Cincinnati
 
-
+```
 ## REFERENCE: 
-
+```
 * https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/modwsgi/
 * https://www.youtube.com/watch?v=VNBpdT0N8hw
+```
