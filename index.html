@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<title>
+calculator
+</title> 
+<style>
+form { 
+margin: 0 auto; 
+width:250px;
+}
+
+ 
+</style> 
+</head>
+
+<body>
+<h1 align = 'center' > <strong> CALCULATOR </strong> </h1><br>
+
+<form  action = "" method = "GET">
+
+<input type = "text" name = "input_1" value = {{request.form.input_1}}>
+
+<br>
+<br>
+<input type = "text" name = "input_2" value{{request.form.input_2}}>
+<br> 
+<br>
+
+<input type = "submit" name ="add" value = "add">
+<input type = "submit" name = "multiply" value = "multply">
+<input type = "submit" name = "subtract" value = "subtract">
+<input type = "submit"  name = "divide" value = "divide"> 
+
+</form>
+<br>
+<br> 
+<p align = "center"> Answer is: {{answer}} </p> 
+
+
+
+
+
+
+
+
+
