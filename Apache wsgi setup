@@ -1,1 +1,34 @@
 
+WSGI: The Web Server Gateway Interface (WSGI) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
+ 
+ mod_wsgi: mod_wsgi is an Apache HTTP Server module by Graham Dumpleton that provides a WSGI compliant interface for hosting Python based web applications under Apache.
+ 
+ installing mod_wsgi for python3: 
+ 
+    sudo apt-get install libapache2-mod-wsgi-py3
+    
+  Once the installation is done. go to "/etc/apache2/sites-available/000-default.conf" and add the following code:
+  
+  <VirtualHost *:80>
+        # The ServerName directive sets the request scheme, hostname and port that
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+
+        DocumentRoot /var/www/html/webapp
+        WSGIScriptAlias / /var/www/html/webapp/webapp/wsgi.py
+
+        ErrorLog /var/www/html/logs/error.log
+        CustomLog /var/www/html/logs/custom.log combined
+</VirtualHost>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+  
+  create logs folder in the /var/www/html/logs
+  
+ Add the following our application python path to the file " apache2.conf"
+ 
+   WSGIPythonPath /var/www/html/webapp
+   
+   
+   Now we integrated our python web application with Apache web server. Now run the public DNS, Our application will be shown. 
